@@ -1,4 +1,5 @@
 require 'capybara/dsl'
+# This class holds all Page Objects and elements related to the sign in page
 class BbcSignIn_page
   attr_accessor :error1, :error2, :error3, :error4, :error5, :error6
   include Capybara::DSL
@@ -9,7 +10,6 @@ class BbcSignIn_page
   SUBMIT_ID = 'submit-button'.freeze
   ERROR_MESSAGE_USERNAME = 'form-message-username'.freeze
   ERROR_MESSAGE_PASSWORD = 'form-message-password'.freeze
-  
 
   def initialize
     @error1 = 'Sorry, we can’t find an account with that email. You can register for a new account or get help here.'
@@ -18,7 +18,7 @@ class BbcSignIn_page
     @error4 = "Sorry, that password isn't valid. Please include a letter."
     @error5 = "Sorry, that password is too long. It can't be more than 50 characters."
   end
-  
+
   def name(name)
     fill_in(USERNAME_TITLE_ID, with: name)
   end

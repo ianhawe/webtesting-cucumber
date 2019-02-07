@@ -1,5 +1,5 @@
 require 'capybara/cucumber'
-require 'rspec' 
+require 'rspec'
 require_relative '../lib/bbc_site'
 
 RSpec.configure do |configure|
@@ -7,7 +7,7 @@ RSpec.configure do |configure|
 end
 
 Capybara.register_driver :chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
 Capybara.configure do |config|
