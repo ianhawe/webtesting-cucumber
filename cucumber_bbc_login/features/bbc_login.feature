@@ -41,10 +41,3 @@ Feature: BBC Login
     And I input a long incorrect password details
     When I try to login
     Then I recieve an error for having a long incorrect password
-
-  Scenario: Inputting incorrect username and credentials shows an error
-    Given I access the bbc login page
-    And I input short incorrect username details
-    And I input incorrect password details
-    When I try to login
-    Then I recieve an error for the account name being too short

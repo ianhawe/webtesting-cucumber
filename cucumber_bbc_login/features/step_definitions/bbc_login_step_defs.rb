@@ -51,11 +51,3 @@ end
 Then("I recieve an error for having a long incorrect password") do
   expect(@bbc_site.bbc_signin_page.error_message2).to eq @bbc_site.bbc_signin_page.error5
 end
-
-Given("I input short incorrect username details") do
-  @bbc_site.bbc_signin_page.name('a')
-end
-
-Then("I recieve an error for the account name being too short") do
-  expect(@bbc_site.bbc_signin_page.error_message1).to eq @bbc_site.bbc_signin_page.error6
-end
