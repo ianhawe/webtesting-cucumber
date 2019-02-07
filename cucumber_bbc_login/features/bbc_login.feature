@@ -21,3 +21,10 @@ Feature: BBC Login
     When I try to login
     Then I recieve an error for having an all letter password
 
+  Scenario: Inputting incorrect short password and credentials shows an error
+    Given I access the bbc login page
+    And I input incorrect username details
+    And I input incorrect password only password details
+    When I try to login
+    Then I recieve an error for having an all number password
+
