@@ -1,6 +1,6 @@
 require 'capybara/dsl'
 class BbcSignIn_page
-  attr_accessor :error1, :error2, :error3, :error4, :error5
+  attr_accessor :error1, :error2, :error3, :error4, :error5, :error6
   include Capybara::DSL
 
   # Page Objects
@@ -18,6 +18,7 @@ class BbcSignIn_page
     @error3 = "Sorry, that password isn't valid. Please include something that isn't a letter."
     @error4 = "Sorry, that password isn't valid. Please include a letter."
     @error5 = "Sorry, that password is too long. It can't be more than 50 characters."
+    @error6 = "Sorry, that username's too short. It needs to be at least two characters."
   end
   
   def name(name)
