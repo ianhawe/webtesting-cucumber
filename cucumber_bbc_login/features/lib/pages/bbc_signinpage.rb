@@ -5,7 +5,6 @@ class BbcSignIn_page
 
   # Page Objects
   USERNAME_TITLE_ID = 'user-identifier-input'.freeze
-  USERNAME_ID = 'form-message-username'.freeze
   PASSWORD_ID = 'password-input'.freeze
   SUBMIT_ID = 'submit-button'.freeze
   ERROR_MESSAGE_USERNAME = 'form-message-username'.freeze
@@ -18,7 +17,6 @@ class BbcSignIn_page
     @error3 = "Sorry, that password isn't valid. Please include something that isn't a letter."
     @error4 = "Sorry, that password isn't valid. Please include a letter."
     @error5 = "Sorry, that password is too long. It can't be more than 50 characters."
-    @error6 = "Sorry, that username's too short. It needs to be at least two characters."
   end
   
   def name(name)
