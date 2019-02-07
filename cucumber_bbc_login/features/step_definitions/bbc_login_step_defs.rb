@@ -43,3 +43,11 @@ end
 Then("I recieve an error for having an all number password") do
   expect(@bbc_site.bbc_signin_page.error_message2).to eq @bbc_site.bbc_signin_page.error4
 end
+
+Given("I input a long incorrect password details") do
+  @bbc_site.bbc_signin_page.password('pafoghiauspuhfpiusadfhuipadshfuidspuihfadshiufhpuasdfhiusdahpfiusdphufhipudasfiuhpasd')
+end
+
+Then("I recieve an error for having a long incorrect password") do
+  expect(@bbc_site.bbc_signin_page.error_message2).to eq @bbc_site.bbc_signin_page.error5
+end
