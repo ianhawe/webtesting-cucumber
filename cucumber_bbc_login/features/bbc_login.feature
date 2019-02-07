@@ -19,5 +19,5 @@ Feature: BBC Login
     And I input incorrect username details
     And I input incorrect letter only password details
     When I try to login
-    Then I recieve an error for having a short password
+    Then I recieve an error for having an all letter password
 

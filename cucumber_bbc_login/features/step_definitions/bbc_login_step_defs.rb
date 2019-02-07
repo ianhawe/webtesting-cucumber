@@ -27,3 +27,11 @@ end
 Then("I recieve an error for having a short password") do
   expect(@bbc_site.bbc_signin_page.error_message2).to eq @bbc_site.bbc_signin_page.error2
 end
+
+Given("I input incorrect letter only password details") do
+  @bbc_site.bbc_signin_page.password('ojiijooji')
+end
+
+Then("I recieve an error for having an all letter password") do
+  expect(@bbc_site.bbc_signin_page.error_message2).to eq @bbc_site.bbc_signin_page.error3
+end
